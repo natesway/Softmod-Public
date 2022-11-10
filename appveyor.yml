@@ -30,14 +30,14 @@ install:
   - haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
   - haxelib install linc_luajit
   - haxelib list
-  - cd /home/appveyor/projects/kade-engine-linux
+  - cd /home/appveyor/projects/softmod-public
 
 build_script:
   - haxelib run lime build linux
 
 after_build:
-  - tar -cvf KadeEngine-Linux.tar -C /home/appveyor/projects/kade-engine-linux/export/release/linux/bin .
+  - tar -cvf Softmod-Linux.tar -C /home/appveyor/projects/softmod-public/export/release/linux/bin .
 
 artifacts:
-- path: KadeEngine-Linux.tar
+- path: Softmod-Linux.tar
   name: Kade Engine for Linux
